@@ -1,0 +1,80 @@
+.adm-cal .rdp {
+  --rdp-cell-size: 52px;
+  margin: 0;
+  font-family: inherit;
+}
+.adm-cal .rdp-months { justify-content: center; }
+.adm-cal .rdp-caption { padding: 0 0 12px; }
+.adm-cal .rdp-caption_label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -.02em;
+}
+.adm-cal .rdp-head_cell {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.adm-cal .rdp-day {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 10px;
+  position: relative;
+  transition: background 120ms;
+}
+/* Range endpoints */
+.adm-cal .rdp-day_range_start,
+.adm-cal .rdp-day_range_end {
+  background: #0ea5e9 !important;
+  color: white !important;
+  font-weight: 700;
+  border-radius: 10px !important;
+}
+/* Range middle */
+.adm-cal .rdp-day_range_middle {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  border-radius: 0 !important;
+  font-weight: 500;
+}
+.adm-cal .rdp-day_range_middle:first-child { border-radius: 10px 0 0 10px !important; }
+.adm-cal .rdp-day_range_middle:last-child  { border-radius: 0 10px 10px 0 !important; }
+/* Today */
+.adm-cal .rdp-day_today:not([class*="range"]) {
+  color: #0ea5e9;
+  font-weight: 800;
+}
+/* Blocked */
+.adm-cal .rdp-day.blocked-day {
+  background: #fff1f2 !important;
+  color: #e11d48 !important;
+}
+/* Priced */
+.adm-cal .rdp-day.priced-day {
+  background: #f0fdf4 !important;
+  color: #16a34a !important;
+}
+/* Hover */
+.adm-cal .rdp-day:hover:not([class*="range"]):not(.blocked-day):not(.priced-day):not([disabled]) {
+  background: #f1f5f9 !important;
+}
+/* Nav buttons */
+.adm-cal .rdp-nav_button {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  color: #64748b;
+  transition: all 120ms;
+}
+.adm-cal .rdp-nav_button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+/* Table cell spacing */
+.adm-cal .rdp-cell { padding: 2px; }
