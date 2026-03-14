@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001";
+const backendUrl =
+  process.env.NEXT_PUBLIC_API_URL || "https://sweet-home-6axj.onrender.com";
 
 const nextConfig = {
   // Allow images from Flask backend (localhost in dev, production URL in prod)
