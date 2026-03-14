@@ -4,8 +4,5 @@
     "framework": "nextjs",
     "env": {
         "NEXT_PUBLIC_API_URL": "https://sweet-home-6axj.onrender.com"
-    },
-    "engines": {
-        "node": "20.x"
     }
 }

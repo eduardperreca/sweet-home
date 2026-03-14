@@ -8,10 +8,12 @@ import {
 } from "react";
 import { translations, type Lang } from "./i18n";
 
+type Translations = typeof translations["it"];
+
 interface LangContextType {
   lang: Lang;
   toggle: () => void;
-  tr: typeof translations["it"];
+  tr: Translations;
 }
 
 const LangContext = createContext<LangContextType>({
@@ -25,7 +27,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const toggle = () => setLang((l) => (l === "it" ? "en" : "it"));
 
   return (
-    <LangContext.Provider value={{ lang, toggle, tr: translations[lang] }}>
+    <LangContext.Provider value={{ lang, toggle, tr: translations[lang] as Translations }}>
       {children}
     </LangContext.Provider>
   );
